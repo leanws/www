@@ -59,7 +59,7 @@ allInputs.forEach(x=>x.disabled=false);allButtons.forEach(x=>x.disabled=false);
 var response=JSON.parse(r.response);
 if (response["success"]){
 var ay=[],transfer=false,discount=false;
-displayDB['transfer']='block';displayDB['discount']='block';
+['transfer','discount'].forEach(x=>{hideID(x);displayDB[x]='block'});
 for(var domain in response["domains"]){ay.push(tld(domain))}
 var bw=ag(ay);
 var columnNames1=["domain name","registration"],columnNames2=["transfer","renewal"];
@@ -67,11 +67,11 @@ var table='<table>\n<thead><tr>\n';
 table+=columnNames1.map((cn)=>'<th>'.concat('',cn,'</th>')).reduce((x,y)=>x+y);
 table+=columnNames2.map((cn)=>'<th class="wide">'.concat('',cn,'</th>')).reduce((x,y)=>x+y);
 table+='</tr></thead>\n<tbody>\n';
-for (var domain in response["domains"]){
+for(var domain in response["domains"]){
 table+="<tr>";
 var az=Boolean(response["domains"][domain]["status"]==1);
-if(az){table+='<td class="free">'+domain+"</td>"}
-else{table+='<td class="busy">'+domain+"</td>"}
+if(az){table+='<td class="free">'+domain+"</td>"}else
+{transfer=true;table+='<td class="busy">'+domain+"</td>"}
 if(bw[tld(domain)]["regPrice"].length==1){
 if(az){table+='<td class="free">$'+bw[tld(domain)]["regPrice"][0]/100+"/yr.</td>"}
 else{table+="<td>N/A</td>"}}
@@ -82,16 +82,15 @@ table+='<td class="free"><s>$'+bw[tld(domain)]["regPrice"][0]/100+"</s>&nbsp;$"+
 else{table+="<td>N/A</td>"}};
 ["transPrice"].forEach(function(x){
 if(bw[tld(domain)][x].length==1){
-if(az){table+='<td class="wide">N/A</td>'} else{transfer=true;table+='<td class="wide">$'+bw[tld(domain)][x][0]/100+'</td>'}}
+if(az){table+='<td class="wide">N/A</td>'} else{table+='<td class="wide">$'+bw[tld(domain)][x][0]/100+'</td>'}}
 else{
 if(az){table+='<td class="wide">N/A</td>'}
 else{
-transfer=true;
 table+='<td class="wide"><s>$'+bw[tld(domain)][x][0]/100+'</s>&nbsp;$'+bw[tld(domain)][x][1]/100+'</td>'}}});
 ["renewPrice"].forEach(function(x){
-discount=true;
 if(bw[tld(domain)][x].length==1){
-if(az){table+='<td class="wide">N/A</td>'} else{table+='<td class="wide">$'+bw[tld(domain)][x][0]/100+'/yr.</td>'}}
+if(az){table+='<td class="wide">N/A</td>'} else{
+table+='<td class="wide">$'+bw[tld(domain)][x][0]/100+'/yr.</td>'}}
 else{
 if(az){table+='<td class="wide">N/A</td>'}
 else{
