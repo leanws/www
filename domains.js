@@ -58,7 +58,8 @@ success:function(r){
 allInputs.forEach(x=>x.disabled=false);allButtons.forEach(x=>x.disabled=false);
 var response=JSON.parse(r.response);
 if (response["success"]){
-var ay=[];
+var ay=[],transfer=false,discount=false;
+displayDB['transfer']='block';displayDB['discount']='block';
 for(var domain in response["domains"]){ay.push(tld(domain))}
 var bw=ag(ay);
 var columnNames1=["domain name","registration"],columnNames2=["transfer","renewal"];
@@ -72,20 +73,31 @@ var az=Boolean(response["domains"][domain]["status"]==1);
 if(az){table+='<td class="free">'+domain+"</td>"}
 else{table+='<td class="busy">'+domain+"</td>"}
 if(bw[tld(domain)]["regPrice"].length==1){
-if(az){table+='<td class="free">$'+bw[tld(domain)]["regPrice"][0]/100+"</td>"}
+if(az){table+='<td class="free">$'+bw[tld(domain)]["regPrice"][0]/100+"/yr.</td>"}
 else{table+="<td>N/A</td>"}}
 else{
+discount=true;
 if(az){
-table+='<td class="free"><s>$'+bw[tld(domain)]["regPrice"][0]/100+"</s>&nbsp;$"+bw[tld(domain)]["regPrice"][1]/100+"</td>"}
+table+='<td class="free"><s>$'+bw[tld(domain)]["regPrice"][0]/100+"</s>&nbsp;$"+bw[tld(domain)]["regPrice"][1]/100+"/yr.</td>"}
 else{table+="<td>N/A</td>"}};
-["transPrice","renewPrice"].forEach(function(x){
+["transPrice"].forEach(function(x){
 if(bw[tld(domain)][x].length==1){
-if(az){table+='<td class="wide">N/A</td>'} else{table+='<td class="wide">$'+bw[tld(domain)][x][0]/100+'</td>'}}
+if(az){table+='<td class="wide">N/A</td>'} else{transfer=true;table+='<td class="wide">$'+bw[tld(domain)][x][0]/100+'</td>'}}
 else{
 if(az){table+='<td class="wide">N/A</td>'}
 else{
+transfer=true;
 table+='<td class="wide"><s>$'+bw[tld(domain)][x][0]/100+'</s>&nbsp;$'+bw[tld(domain)][x][1]/100+'</td>'}}});
+["renewPrice"].forEach(function(x){
+discount=true;
+if(bw[tld(domain)][x].length==1){
+if(az){table+='<td class="wide">N/A</td>'} else{table+='<td class="wide">$'+bw[tld(domain)][x][0]/100+'/yr.</td>'}}
+else{
+if(az){table+='<td class="wide">N/A</td>'}
+else{
+table+='<td class="wide"><s>$'+bw[tld(domain)][x][0]/100+'</s>&nbsp;$'+bw[tld(domain)][x][1]/100+'/yr.</td>'}}});
 table+="</tr>"}
+if(discount)showID("discount");if(transfer)showID("transfer");
 table+="</tbody></table>\n";
 showID("theTable");html("gotTable",table);hideID("preloader")}
 else{Achtung(response['errMessage'])}}})}
