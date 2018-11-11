@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="https://t.leanws.com/favicon.ico" />
+<meta charset="utf-8" />
+<title>Your Order</title>
+<meta name="description" content="" />
+<meta name="author" content="Lean Web Solutions"/>
+<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+<meta name="theme-color" content="#414141">
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<link rel="stylesheet" href="https://t.leanws.com//fonts/we.css">
+<link rel="stylesheet" href="https://t.leanws.com/plans.css">
+<link rel="stylesheet" href="https://t.leanws.com/common.css">
+<style>
+div.input-block{margin:0 1em 0 0}
+div.input-block input{width:100%}
+.short{margin-top:1em}
+.short > label{margin-right:1em}
+.short > label:last-child{margin-right:0}
+select,textarea,.fon .input-block input{color:white;background-color:rgba(0,0,0,.4); border:#243E22 2px solid;padding:0px 12px; transition:all 0.2s;}
+select,.fon .input-block input{height:2em;}
+div.input-block.short>div{display:inline-block;margin-right:1em}
+div.input-block.short>div:last-child{margin-right:0}
+div.input-block.short>div>label{display:block}
+</style>
+</head>
+<body onkeydown="escModals(event)" style="margin:0;color:#414141;">
+<div id="message" style="background-color:rgba(0,0,0,.5)">You need to enable JavaScript to run this website.</div>
+<script>document.getElementById('message').style.display='none';var localScripts=["order.js"]</script>
+<div id="message" style="display:none;background-color:rgba(0,0,0,.5)">
+Please specify<br><span id="ae"></span>
+</div>
+<div id="verhAni">
+<div id="menu" class="header" style="padding:0;margin:0;"></div>
+<div>FINALIZE YOUR ORDER</div>
+</div>
+<div class="fon" style="padding-bottom:1em">
+<section class="block-of-cols" style="padding-top:1em">
+<article class="story col" style="min-width:20%">
+<h2>Name</h2>
+<div class="input-block">
+<label for="busName">Business name: <input type="text" id="busName"> </label>
+</div>
+<div class="input-block">
+<label for="firstName" class="firstName">First name: <input type="text" placeholder="John" id="firstName"> </label>
+</div>
+<div class="input-block">
+<label for="lastName" class="lastName">Last name: <input type="text" placeholder="Doe" id="lastName"> </label>
+</div>
+</article>
+<article class="story col" style="min-width:20%">
+<h2>Contact info</h2>
+<div style="margin:1em 0">
+Preferred contact method:<br>
+<label><input name="radio-regtr" value="0" type="radio" checked>email</label>
+or
+<label><input name="radio-regtr" value="1" type="radio">phone</label>
+</div>
+<div class="input-block">
+<label for="callTime">Best time to call:</label><input type="text" id="callTime">
+</div>
+<div class="input-block">
+<label for="phone" class="phone">Phone:</label> <input type="tel" placeholder="(xxx) xxx-xxxx" id="phone">
+</div>
+<div class="input-block">
+<label for="email" class="email">Email:</label> <input type="email" id="email" placeholder="user@site.com">
+</div>
+</article>
+<article class="story col" style="min-width:40%">
+<h2>Address</h2>
+<div class="input-block">
+<label style="min-width:40ex;" for="addr">First address line:</label>
+<input type="text" placeholder="100 Main Street" id="addr">
+</div>
+<div class="input-block">
+<label style="min-width:20ex;" for="addr2">Second address line:</label>
+<input type="text" placeholder="Suite 123" id="addr2">
+</div>
+<div class="input-block short">
+<div>
+<label for="city">City:</label><input type="text" id="city" style="max-width:8em">
+</div>
+<div>
+<label for="USstate">State:</label><select id="USstate" style="min-width:5em;"></select>
+</div>
+<div>
+<label for="zip">ZIP code:</label><input type="text" id="zip" style="width:5em">
+</div>
+</div>
+</article>
+<article class="story col" style="min-width:50%">
+<h2>Your order<span class="order"></span></h2>
+<label for="furtherDetails">Further order details: design ideas, etc.</label>
+<textarea style="width:100%;box-sizing:border-box;" id="furtherDetails" placeholder="Do you already have a web site? What would you like to change?" rows="6" maxlength="5000"></textarea>
+<div style="text-align:center;margin:1em auto 0 auto;width:12em">
+<a onclick="co();" class="button submit" href="#">Submit order</a>
+</div>
+</article>
+</section>
+</div>
+<h2 style="color:red;margin:1ex">Warning: this website has reduced functionality with respect to the <a href="https://leanws.com">main one</a>. It should only be used if the <a href="https://leanws.com">main website</a> is inaccessible.</h2><footer id="footer" style="font-family:'Gillius';background-color:#333;color:#C7C7C7;padding-top:2em"> </footer>
+<a id="goup" href="#">W</a><div id="login" class="modal" onkeydown="loginKeyPressed(event)" tabindex="-1"></div>
+<div id="preloader" style="display:none">t</div>
+<script async src="https://t.leanws.com/1.js"></script>
+<!-- Global site tag (gtag.js) - Google Ads: 826299984 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-826299984"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "AW-826299984");
+</script></body>
+</html>

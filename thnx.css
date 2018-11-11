@@ -1,0 +1,15 @@
+#thnx{
+padding:1em;background-size:cover;background-attachment:fixed}
+@media (min-width:801px){
+#thnx{color:white;
+background:black url("roads/90/bridge-918677_1920.jpg") no-repeat fixed center top;
+background-size:100% auto;
+}}
+@media (min-width:601px) and (max-width:800px){
+#thnx{
+background:black url("bg/small.png") no-repeat fixed center center;
+background-size:auto 100%;
+}}
+@media (max-width:600px){#thnx{
+background:black url("bg/small.png") no-repeat fixed center center;
+background-size:contain}}

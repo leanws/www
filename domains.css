@@ -1,0 +1,10 @@
+form,p{margin:1em}
+h3{text-align:center}
+.av{background:#9DE0BC;border-radius:20%;cursor:pointer;padding:3px;margin-right:1em}
+.checked{background:#EB6C6A;border-radius:20%;cursor:pointer;padding:3px;margin-right:1em}
+table{text-align:center;border-collapse:collapse;margin:1em auto}
+table,th,td{border:1px solid black}
+th{padding:0 1em}
+table thead th{background-color:#006699;color:white;font-weight:bold}
+.free{color:white;background:green}
+.busy{background:#FF5050;color:white}

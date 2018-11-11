@@ -1,0 +1,12 @@
+@font-face { font-family:"few icons"; src:url("awesome.woff"); }
+
+@font-face { font-family:"Free Sans"; src:url("we.otf"); }
+/* to do: choose better font for the footer */
+
+@font-face { font-family:"Gillius"; src:url("Gillius.woff"); }
+
+/* для slogan-надписи на главной странице при малых размерах экрана: fast websites for small business */
+@font-face { font-family: 'Free Serif Italic'; src: url('free-serif-italic.otf'); }
+
+/* для slogan-надписи на главной странице при малых размерах экрана: fast websites for small business */
+@font-face {font-family: 'Linux Libertine'; src: url('LinLibertine_R.otf')}

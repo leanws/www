@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="https://t.leanws.com/favicon.ico" />
+<meta charset="utf-8" />
+<title>Fast Websites for Small Business</title>
+<meta name="description" content="" />
+<meta name="author" content="Lean Web Solutions"/>
+<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+<meta name="theme-color" content="#414141">
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<link rel="stylesheet" href="https://t.leanws.com//fonts/we.css">
+<link rel="stylesheet" href="https://t.leanws.com/common.css">
+<link rel="stylesheet" href="https://t.leanws.com/plans.css">
+<style>
+form,p{margin:1em}
+h3{text-align:center}
+.av{background:#9DE0BC;border-radius:20%;cursor:pointer;padding:3px;margin-right:1em}
+.checked{background:#EB6C6A;border-radius:20%;cursor:pointer;padding:3px;margin-right:1em}
+table{text-align:center;border-collapse:collapse;margin:1em auto}
+table,th,td{border:1px solid black}
+th{padding:0 1em}
+table thead th{background-color:#006699;color:white;font-weight:bold}
+.free{color:white;background:green}
+.busy{background:#FF5050;color:white}
+article.story{max-width:60em;vertical-align:top;display:inline-block;
+position: relative; left: 50%; transform:translate(-50%,0);}
+@media (max-width:379px){th.wide,td.wide{display:none}}
+#goup{background:rgba(0,0,0,0.4);}
+span.button{
+border-radius:20%;
+padding:.5ex 1ex;
+color:white;
+background:#FF7575}
+span.button:hover{cursor:pointer}
+</style>
+</head>
+<body onkeydown="escModals(event)" style="margin:0;color:#414141;">
+<div id="message" style="background-color:rgba(0,0,0,.5)">You need to enable JavaScript to run this website.</div>
+<script>document.getElementById('message').style.display='none';var localScripts=["domains.js"]</script>
+<div id="verhAni">
+<div id="menu" class="header" style="padding:0;margin:0;"></div>
+<div>CHOOSE YOUR DOMAIN NAME</div>
+</div>
+<div class="fon" style="padding-bottom:1em">
+<article class="story" style="max-width:60em;vertical-align:top;display:inline-block">
+<p>Not sure how to choose your domain name? Probably you want it to be short yet similar to your business name. Sometimes it is a good idea to register several domains and associate them all with your website.</p>
+<p>Once you decide which domain name to register or transfer, <a class="wiki" href="plans">configure functionality of your website</a>.</p>
+<p>Below you can select domain zones (max. 20) and check if your domain name is available. Apart from the well-known zones (.com, .net., org, etc.), there are hundreds of newer zones available. Place the mouse pointer over the zone name to see the registration fee.</p>
+<p>Some domain names might be taken in old zones but available in the new ones!</p>
+<div class="loaded" style="display:none;">
+<h3>Check if a domain name is available in these zones</h3>
+<p data-bind="foreach:ad" style="line-height:1.8em;text-align:center">
+<span class="checked" data-bind="attr:{title:'$'+Math.min.apply(Math,regPrice)/100},text:dZone,click:$root.remove" data-toggle="tooltip" data-placement="bottom"></span>
+</p>
+<div class="form" style="text-align:center" onkeydown="cm(event)">
+<p>click the zone to remove it from the checklist</p>
+<input type="text" style="border:0;border-radius:10px;font-size:120%;padding:1ex" placeholder="domain name" id="domainName" name="domainName">
+<p style="margin-bottom:0">numbers, letters, and hypens allowed</p>
+<button id="dsButton" onclick="checkIfAvailable()" class="submit" style="font-size:120%;margin:0 auto;margin-top:1em;border-radius:10px">&nbsp;Check domain availability&nbsp;</button>
+</div>
+</div>
+<div id="theTable" style="display:none;">
+<div id="gotTable" style="padding:0px;"></div>
+</div>
+</article>
+</div>
+<div class="loaded" style="display:none; background-color:#F7F7F7;">
+<h3>There are <span data-bind="text: ae().length"> </span> other zones to check – click the zone to add it to the checklist</h3>
+<span class="button" data-bind="visible:ac,click:bb">show fewer zones</span>
+<span style="line-height:1.8em" data-bind="foreach:ae">
+<span class="av" data-bind="attr:{title:'$'+Math.min.apply(Math,regPrice)/100},text:dZone,click:$root.add" data-toggle="tooltip" data-placement="bottom"></span>
+</span><br>
+<span class="button" data-bind="visible:!ac(),click:bc">…show all zones</span>
+<span class="button" data-bind="visible:ac,click:bb">show fewer zones</span>
+</div>
+<h2 style="color:red;margin:1ex">Warning: this website has reduced functionality with respect to the <a href="https://leanws.com">main one</a>. It should only be used if the <a href="https://leanws.com">main website</a> is inaccessible.</h2><footer id="footer" style="font-family:'Gillius';background-color:#333;color:#C7C7C7;padding-top:2em"> </footer>
+<a id="goup" href="#">W</a><div id="login" class="modal" onkeydown="loginKeyPressed(event)" tabindex="-1"></div>
+<div id="preloader" style="display:none;">t</div>
+<script async src="https://t.leanws.com/1.js"></script>
+<!-- Global site tag (gtag.js) - Google Ads: 826299984 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-826299984"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "AW-826299984");
+</script></body>
+</html>

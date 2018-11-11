@@ -1,0 +1,16 @@
+a.button{color:white}
+a.button.submit{line-height:50px;padding:0;margin-left:auto;margin-right:auto;background-color:rgba(0,0,0,.6);display:block;font-size:110%;border:thin solid white;transition:all .3s;text-align:center;border-radius:10px}
+article.story{
+line-height:140%;
+background:rgba(0,0,0,.75);color:white;margin:.5em;
+padding:0 1em 1em 1em;border-radius:10px 30px}
+article.story>h2{color:#8AB933}
+article.story>h2:first-child{margin-bottom:.5em}
+article.story>a.button{display:block;font-size:110%;margin-top:1em;border:1px solid white;transition:all .3s;text-align:center;border-radius:10px}
+article.story>a:hover{color:#8AB933;cursor:pointer;border-color:#8AB933}
+article.story>a>span.plan{color:yellow}
+article.story>ul.wiki{margin:0 0 0 -2em}
+article.story>ul.wiki>li{list-style:none;margin-top:10px}
+article.story>ul.wiki>li:first-child{margin-top:0}
+@media(min-width:807px) and (max-width:1235px){article.story{min-width:37%}}
+@media(max-width:806px){article.story{min-width:51%}}
