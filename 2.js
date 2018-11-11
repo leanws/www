@@ -82,8 +82,8 @@ else{
 return (cq[cp]=new Promise((resolve,reject)=>{
 if(IDget(cp))
 {loadScript("js-lib/ajaxme.js").then(function(){
-// window.AjaxMe.get({url:'https://t.leanws.com/'+cp+'.html',
-window.AjaxMe.get({url:cp+'.html',
+window.AjaxMe.get({url:'https://t.leanws.com/'+cp+'.html',
+// window.AjaxMe.get({url:cp+'.html',
 success:r=>{html(cp,r.response);resolve(r.response)},
 error:r=>reject(r)})})}
 else{resolve()}}))}}})();
