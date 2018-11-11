@@ -24,7 +24,7 @@ if(window.scrollY!='0'){
 showID("goup");header.classList.add("fixed");body.style.paddingTop="40px";}
 else{hideID("goup");body.style.paddingTop="0";header.classList.remove('fixed')}});
 window.scrollTo(0,0)});
-var bt={};
+var displayDB={};
 function val(id,v){
 if("undefined"==typeof v){return IDget(id).value}
 else{IDget(id).value=v}}
@@ -44,13 +44,13 @@ function hideID(id){
 var el=document.getElementById(id);
 if(el){
 var cur=el.style.display;
-if(cur!='none'){bt[id]=cur}
+if(cur!='none'){displayDB[id]=cur}
 el.style.display='none'}}
 function showID(id){
 var el=document.getElementById(id);
 if(el){
-if("undefined"!=typeof bt[id])
-el.style.display=(id in bt)? bt[id]:'inline'
+if("undefined"!=typeof displayDB[id])
+el.style.display=(id in displayDB)? displayDB[id]:'inline'
 else
 el.style.display='inline'}}
 function hideClass(cl){toArray(document.getElementsByClassName(cl)).forEach(function(el){el.style.display='none'})}
