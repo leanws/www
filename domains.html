@@ -46,7 +46,7 @@ span.button:hover{cursor:pointer}
 <article class="story" style="max-width:60em;vertical-align:top;display:inline-block">
 <p>Not sure how to choose your domain name? &nbsp; Probably it's best to keep it short, yet similar to your business name. It is a good idea to register several domains and associate them all with your website.</p>
 <p>Once you decide which domain name to register or transfer, the next step is to <a class="wiki" href="plans">configure functionality of your website</a>.</p>
-<p>Below you can select domain zones (max. 20) and check if your domain name is available. &nbsp; Apart from the well-known zones (.com, .net, .org, etc.), there are hundreds of newer zones available.&nbsp;&nbsp; Place the mouse pointer over the zone name to see the registration fee.</p>
+<p>Below you can select domain zones (max. 20) and check if your domain name is available. &nbsp; Apart from the well-known zones (.com, .net, .org, etc.), there are <a class="wiki" href="#ae">hundreds of newer zones</a> available. &nbsp; Place the mouse pointer over the zone name to see the registration fee.</p>
 <p>Some domain names might be taken in the old zones, but are available in the new ones!</p>
 <div class="loaded" style="display:none;">
 <h3>Check if a domain name is available in these zones:</h3>
@@ -67,9 +67,10 @@ span.button:hover{cursor:pointer}
 </div>
 </article>
 </div>
-<div class="loaded" style="display:none; background-color:#F7F7F7;">
-<h3>There are <span data-bind="text: ae().length"> </span> other zones to check – click the zone to add it to the checklist</h3>
-<p>Place the mouse pointer over the zone name to see the registration fee.</p>
+<div id="ae" class="loaded" style="display:none; background-color:#F7F7F7;">
+<h3>There are <span data-bind="text: ae().length"> </span> other zones to check</h3>
+<p style="text-align:center">Place the mouse pointer over the zone name to see the registration fee.</p>
+<p style="text-align:center">Click the zone to add it to the checklist.</p>
 <span class="button" data-bind="visible:ac,click:bb">show fewer zones</span>
 <span style="line-height:1.8em" data-bind="foreach:ae">
 <span class="av" data-bind="attr:{title:'$'+Math.min.apply(Math,regPrice)/100},text:dZone,click:$root.add" data-toggle="tooltip" data-placement="bottom"></span>

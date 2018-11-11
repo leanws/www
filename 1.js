@@ -8,10 +8,10 @@ if(IDs.map(x=>Boolean(IDget(x))).reduce((x,y)=>x&&y)){f()}
 else{onLoad.push(f)}}
 function bo(){
 "use strict";
-if (typeof Symbol=="undefined") return false;
+if(typeof Symbol=="undefined") return false;
 try{
 eval("var bar=(x)=> x+1");
-} catch (e){return false;}
+}catch(e){return false}
 return true}
 if(!bo()){
 var el=IDget("message");
