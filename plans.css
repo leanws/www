@@ -17,3 +17,4 @@ article.story>ul.wiki>li:first-child{margin-top:0}
 input.text{box-sizing:border-box;background-color:rgba(0,0,0,.3);color:white;margin-top:5px}
 input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;appearance:none;margin:0}
 input[type=number]{width:5ex;-moz-appearance:textfield;appearance:textfield}
+p.priceSig{border-radius:7px;display:inline-block;color:white;padding:1ex;background:rgba(0,0,0,.6)}
