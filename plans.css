@@ -14,3 +14,6 @@ article.story>ul.wiki>li{list-style:none;margin-top:10px}
 article.story>ul.wiki>li:first-child{margin-top:0}
 @media(min-width:807px) and (max-width:1235px){article.story{min-width:37%}}
 @media(max-width:806px){article.story{min-width:51%}}
+input.text{box-sizing:border-box;background-color:rgba(0,0,0,.3);color:white;margin-top:5px}
+input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;appearance:none;margin:0}
+input[type=number]{width:5ex;-moz-appearance:textfield;appearance:textfield}
