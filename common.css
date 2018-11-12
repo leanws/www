@@ -57,8 +57,7 @@ border-width:0 12px 9px;
 border-color:rgba(255,255,255,0.3) transparent;
 position:absolute;top:-.5em;left:30px;
 transform:translateY(-130%);
-transition:transform .4s ease;
-}
+transition:transform .4s ease}
 li.dropdown.hover>ul.dropdown-menu::before{transform:translateY(0)}
 li.dropdown.hover>ul.dropdown-menu{transform:translateY(0);display:inline-block;text-transform:none}
 li.dropdown>ul.dropdown-menu>li:hover>a{color:white;text-transform:uppercase}
