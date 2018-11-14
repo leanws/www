@@ -17,7 +17,6 @@ if(!bo()){
 var el=IDget("message");
 el.innerHTML='Please use a newer browser for this website.';
 el.style.display='inline'}else{
-if ("http:"==window.location.protocol) window.location.assign(window.location.href.replace("http:","https:"))
 loadScript=(function(){
 var bp={};
 return function(bq){

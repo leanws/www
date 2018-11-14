@@ -1,6 +1,5 @@
 // Copyright (c) 2018 Lean Web Solutions https://leanws.com
 
-if ("http:"==window.location.protocol) window.location.assign(window.location.href.replace("http:","https:"))
 var header=document.getElementsByClassName("header")[0],body=document.getElementById("verhAni");
 var SM,allInputs,allButtons;
 function showInfo(mes,sec,bz){
