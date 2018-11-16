@@ -97,7 +97,7 @@ a.hrow:hover{color:#0D5F07}
     <div id="message" style="background-color:rgba(0,0,0,.5)">You need to enable JavaScript to run this website.</div>
     <script>document.getElementById('message').style.display='none';</script>
     <div id="verhAni" style="background:url('https://t.leanws.com/grey.png');z-index:0">
-      <canvas id="canvas" style="z-index:0;position:absolute;"></canvas>
+      <canvas id="Xcanvas" style="z-index:0;position:absolute;"></canvas>
       <div class="header" style="padding:0;margin:0">
 <a href="/">
   <div class="logo">
@@ -116,7 +116,7 @@ a.hrow:hover{color:#0D5F07}
       <li> <a href="contents">All pages</a></li>
     </ul>
   </li>
-  <li id="loginoutH" onclick="login(this)">login</li>
+  <!-- if mainServer --> <li id="loginoutH" onclick="login(this)">login</li> <!-- endIf -->
   <li><a href="domains">domains</a></li>
   <li><a href="plans">prices</a></li>
 </ul>
@@ -259,6 +259,7 @@ a.hrow:hover{color:#0D5F07}
       </ul>
     </div>
   </article>
+  <!-- if mainServer -->
   <article class="col">
     <h2 style="margin-bottom:0">FREE WEBSITE EVALUATION</h2>
     <p style="text-align:center;margin:0">See how your website could be improved</p>
@@ -272,6 +273,7 @@ a.hrow:hover{color:#0D5F07}
       <a title="facebook" id="facebook" href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fleanws.com">L</a><a title="twitter" id="twitter" href="http://twitter.com/share?text=Lean%20Web%20Solutions&amp;url=https%3A%2F%2Fleanws.com&amp;hashtags=smallbusiness,website">K</a><a title="google+" id="googleP" href="https://plus.google.com/share?url=https%3A%2F%2Fleanws.com">O</a><a title="linkedin" id="linkedin" href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fleanws.com&amp;title=Lean%20Web%20Solutions&amp;summary=Functional%20Web%20Design%20for%20Small%20Business&amp;source=https%3A%2F%2Fleanws.com">P</a>
     </div>
   </article>
+  <!-- endIf -->
 </section>
 <div id="bottomLine" style="position:relative;width:100%;box-sizing: border-box;">
   <div style="position:absolute;left:2em;top:1.5em;">© All Rights Reserved, Lean Web Solutions</div>
@@ -310,7 +312,7 @@ a.hrow:hover{color:#0D5F07}
 			     bl.parentNode.insertBefore(tag,bl)}))}}})();
 	     loadScripts=function(by){
 		 return Promise.all(by.map(function(x){return loadScript(x)}))};
-	     loadScripts(["2.js","js-lib/js.cookie.js","js-lib/ajaxme.js"]);
+	     loadScripts(["r2.js","js-lib/js.cookie.js","js-lib/ajaxme.js"]);
 	     /* if(typeof localScripts!="undefined")loadScripts.apply(localScripts);*/
      }
     </script>

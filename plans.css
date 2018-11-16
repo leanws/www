@@ -2,7 +2,7 @@ a.button{color:white}
 a.button.submit{line-height:50px;padding:0;margin-left:auto;margin-right:auto;background-color:rgba(0,0,0,.6);display:block;font-size:110%;border:thin solid white;transition:all .3s;text-align:center;border-radius:10px}
 article.story{
 line-height:140%;
-background:rgba(0,0,0,.75);color:white;margin:.5em;
+background:rgba(0,0,0,.8);color:white;margin:.5em;
 padding:0 1em 1em 1em;border-radius:10px 30px}
 article.story>h2{color:#8AB933}
 article.story>h2:first-child{margin-bottom:.5em}
