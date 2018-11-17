@@ -43,10 +43,10 @@ Please specify<br><span id="ae"></span>
 <label for="busName">Business name: <input type="text" id="busName"> </label>
 </div>
 <div class="input-block">
-<label for="firstName" class="firstName">First name: <input type="text" placeholder="John" id="firstName"> </label>
+<label for="firstName" class="firstName">First name: <input type="text" placeholder="John" onfocus="this.placeholder=''" onblur="this.placeholder='your first name'" id="firstName"> </label>
 </div>
 <div class="input-block">
-<label for="lastName" class="lastName">Last name: <input type="text" placeholder="Doe" id="lastName"> </label>
+<label for="lastName" class="lastName">Last name: <input type="text" placeholder="Doe" onfocus="this.placeholder=''" onblur="this.placeholder='your last name'" id="lastName"> </label>
 </div>
 </article>
 <article class="story col" style="min-width:20%">
@@ -61,21 +61,21 @@ or
 <label for="callTime">Best time to call:</label><input type="text" id="callTime">
 </div>
 <div class="input-block">
-<label for="phone" class="phone">Phone:</label> <input type="tel" placeholder="(xxx) xxx-xxxx" id="phone">
+<label for="phone" class="phone">Phone:</label> <input type="tel" placeholder="(xxx) xxx-xxxx" onfocus="this.placeholder=''" onblur="this.placeholder='your phone number'" id="phone">
 </div>
 <div class="input-block">
-<label for="email" class="email">Email:</label> <input type="email" id="email" placeholder="user@site.com">
+<label for="email" class="email">Email:</label> <input type="email" id="email" placeholder="user@site.com" onfocus="this.placeholder=''" onblur="this.placeholder='enter your email'">
 </div>
 </article>
 <article class="story col" style="min-width:40%">
 <h2>Address</h2>
 <div class="input-block">
 <label style="min-width:40ex;" for="addr">First address line:</label>
-<input type="text" placeholder="100 Main Street" id="addr">
+<input type="text" placeholder="100 Main Street" onfocus="this.placeholder=''" onblur="this.placeholder='enter your address'" id="addr">
 </div>
 <div class="input-block">
 <label style="min-width:20ex;" for="addr2">Second address line:</label>
-<input type="text" placeholder="Suite 123" id="addr2">
+<input type="text" placeholder="Suite 123" onfocus="this.placeholder=''" id="addr2">
 </div>
 <div class="input-block short">
 <div>
@@ -92,7 +92,7 @@ or
 <article class="story col" style="min-width:50%">
 <h2>Your order<span class="order"></span></h2>
 <label for="furtherDetails">Further order details: design ideas, etc.</label>
-<textarea style="width:100%;box-sizing:border-box;" id="furtherDetails" placeholder="Do you already have a web site? What would you like to change?" rows="6" maxlength="5000"></textarea>
+<textarea style="width:100%;box-sizing:border-box;" id="furtherDetails" onfocus="this.placeholder=''" onblur="this.placeholder='Do you already have a web site? What would you like to change?'" placeholder="Do you already have a web site? What would you like to change?" rows="6" maxlength="5000"></textarea>
 <div style="text-align:center;margin:1em auto 0 auto;width:12em">
 <a onclick="co();" class="button submit" href="#">Submit order</a>
 </div>
