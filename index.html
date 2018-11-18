@@ -20,8 +20,7 @@ display:inline-block;position:relative;vertical-align:middle}
 .svg-wrap a{width:auto;margin:1px auto}
 #svgLinks>div.svgWW{display:inline-block}
 .svg-wrap svg{font-family:'Free Sans';font-size:40px;position:absolute;vertical-align:top}
-#svgLinks>div a>svg:last-child{left:0}
-#svgLinks>div a>svg:first-child{fill:none;stroke:white;stroke-width:2}
+#svgLinks>div a>svg{left:0}
 @media(max-width:831px){
 #obtn{margin-bottom:2em}
 #obtn>div{position:relative;top:2em}}
@@ -62,18 +61,9 @@ animation-name:weAre;animation-duration:30s;animation-iteration-count:infinite}
 49.98%,62.64%{transform:translate(0,-75%)}
 66.64%,79.3%{transform:translate(0,-50%)}
 83.3%,95.96%{transform:translate(0,-25%)}}
-#svgLinks>div.svgWW>div.svg-wrap>a>svg:first-child{opacity:0;
-stroke-miterlimit:10;stroke-dasharray:625;stroke-dashoffset:600;stroke-linecap:round;
--webkit-transition:stroke-dashoffset 0s 0.2s,opacity 0.2s;
-transition:stroke-dashoffset 0s 0.2s,opacity 0.2s}
-#svgLinks>div.svgWW>div.svg-wrap>a:hover>svg:first-child{
-stroke-dashoffset:0;opacity:1;
--webkit-transition:opacity 0s,stroke-dashoffset .5s cubic-bezier(0.645,0.045,0.355,1);
-transition:opacity 0s,stroke-dashoffset .5s cubic-bezier(0.645,0.045,0.355,1);
-fill:rgba(0,0,0,.3)
-}
-#svgLinks>div.svgWW>div.svg-wrap>a>svg:last-child{fill:url(#lightcenter)}
-#svgLinks>div.svgWW>div.svg-wrap>a:hover>svg:last-child{fill:#92D98C}
+#svgLinks>div.svgWW>div.svg-wrap>a:hover>svg{filter:url(#f2)}
+#svgLinks>div.svgWW>div.svg-wrap>a>svg{fill:url(#lightcenter)}
+#svgLinks>div.svgWW>div.svg-wrap>a:hover>svg{fill:#92D98C}
 #central{font-size:400%;color:#ecf0f1}
 a.button{background:transparent;color:white;font-family:"Free Sans"}
 @keyframes invite1{from{transform:translateX(1px)}to{transform:translateX(0)}}
@@ -137,10 +127,18 @@ a.hrow:hover{color:#0D5F07}
 	  <div class="svgWW" style="width:245px">
 	    <div class="svg-wrap" style="width:inherit;height:140px;">
 	      <a href="hosting">
-		<svg  height="140px"  style="width:245px;top:0;left:0;">
-		  <path d="m 238 80 q 18 -70 -55 -72 -20 -2 -155 0 -15 0 -20 10 -10 30 0 60 5 10 15 25 20 30 50 30 50 0 120 -10 27 0 44 -40 z"/>
-		</svg>
 		<svg height="140px" style="width:245px;">
+		  <defs>
+		    <radialGradient id="lightcenter" fx="0.45" fy="0.4">
+		      <stop stop-color=rgba(256,256,256,1) offset="0"/>
+		      <stop stop-color=rgba(256,256,256,0.3) offset="1.0"/>
+		    </radialGradient>
+		    <filter id="f2" x="0" y="0" width="120%" height="120%">
+		      <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0" />
+		      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+		      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+		    </filter>
+		  </defs>
 		  <g stroke="rgba(30,30,30,0.8)" stroke-width="1">
 		    <text x="120" y="42" style="text-anchor:middle;">free hosting</text>
 		    <text x="120" y="75" style="text-anchor:middle;">for most</text>
@@ -153,16 +151,7 @@ a.hrow:hover{color:#0D5F07}
 	  <div class="svgWW middleSVG" style="width:190px">
 	    <div class="svg-wrap" style="width:inherit;height:97px;">
 	      <a href="payments">
-		<svg width="190" height="97"  style="top:0px;left:0">
-		  <path d="m 185 58 q 5 -25 -43 -50 -20 -8 -70 -7 -40 0 -60 30 -15 20 -2 48 10 15 80 15 30 0 70 -5 20 -5 25 -30 z"/>
-		</svg>
 		<svg width="190" height="97" style="top:0;">
-		  <defs>
-		    <radialGradient id="lightcenter" fx="0.45" fy="0.4">
-		      <stop stop-color=rgba(256,256,256,1) offset="0"/>
-		      <stop stop-color=rgba(256,256,256,0.3) offset="1.0"/>
-		    </radialGradient>
-		  </defs>
 		  <g stroke="rgba(30,30,30,0.8)" stroke-width="1">
 		    <text x="95" y="40" style="text-anchor:middle;">online</text>
 		    <text x="95" y="68" style="text-anchor:middle;">payments</text>
@@ -174,9 +163,6 @@ a.hrow:hover{color:#0D5F07}
 	  <div class="svgWW middleSVG" style="width:176px;">
 	    <div class="svg-wrap" style="width:inherit;height:100px;">
 	      <a href="busemail">
-		<svg height="100px"  style="width:176px;top:0;left:0;">
-		  <path d="m 172 45 q -5 -20 -28 -35 -30 -15 -120 -5 -20 5 -20 20 0 20 10 40 10 20 40 30 20 5 90 0 30 0 30 -30 z" />
-		</svg>
 		<svg height="100px"  style="width:176px">
 		  <g stroke="rgba(30,30,30,0.8)" stroke-width="1">
 		    <text x="85" y="45" style="text-anchor:middle;">business</text>
@@ -189,9 +175,6 @@ a.hrow:hover{color:#0D5F07}
 	  <div class="svgWW" style="width:256px;">
 	    <div class="svg-wrap" style="width:inherit;height:115px;">
 	      <a href="appts">
-		<svg  height="125px"  style="width:256px;top:0;left:0;">
-		  <path d="m 255 75 q -5 -60 -55 -67 -20 -5 -65 -4 -40 -1 -75 5 -50 10 -55 60 0 20 25 35 20 10 55 13 50 2 80 1 60 -5 80 -22 7 -5 10 -18 z" />
-		</svg>
 		<svg height="115px" style="width:256px;">
 		  <g stroke="rgba(30,30,30,0.8)" stroke-width="1">
 		    <text x="127" y="42" style="text-anchor:middle;">scheduling</text>
