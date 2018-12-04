@@ -154,7 +154,7 @@ font-family:'few icons';font-size:145%;margin:0;padding:2px 3px;line-height:100%
 div.iwr{height:20px}
 div.iwr>input{
 border:0;
-border-radius:5px;
+border-radius:2px;padding-left:.5ex;
 text-align:left;width:80%;vertical-align:middle;
 height:100%;display:inline-block}
 div.form>button,form>button{
