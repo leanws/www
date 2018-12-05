@@ -1,4 +1,4 @@
-/* Time-stamp:<2018-09-15 10:48 EDT>
+/* Time-stamp:<2018-12-04 19:02 EST>
 * @license Copyright (c) 2018,Lean Web Solutions. All rights reserved.
 * 
 * @author:Oleg Shalaev,oleg@leanws.com */
@@ -151,10 +151,10 @@ div.iwr>span{
 vertical-align:middle;
 color:white;border:0;
 font-family:'few icons';font-size:145%;margin:0;padding:2px 3px;line-height:100%;display:inline-block}
-div.iwr{height:20px}
+div.iwr{height:2em}
 div.iwr>input{
 border:0;
-border-radius:2px;padding-left:.5ex;
+border-radius:3px;padding-left:.5ex;
 text-align:left;width:80%;vertical-align:middle;
 height:100%;display:inline-block}
 div.form>button,form>button{
