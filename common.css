@@ -148,7 +148,7 @@ article.col6{min-width:20em;max-width:30%;margin:1em 5em}
 span.wiki,a.wiki{color:#B1D2FF;transition:all .3s}
 span.wiki:hover,a.wiki:hover{color:#8AB933}
 div.iwr>*{margin:0;display:inline-block;height:35px;box-sizing:border-box}
-div.iwr>span{width:2em;font-size:140%;color:black;background:#eee;border-radius:5px 0 0 5px;border:0;font-family:'few icons';line-height:30px}
+div.iwr>span{width:2em;color:black;background:#eee;border-radius:5px 0 0 5px;border:0;font-family:'few icons';line-height:30px}
 div.iwr>input{padding:0 1em;color:#111;border-radius:0 5px 5px 0;border:0;width:20ex;font-size:inherit}
 div.form>button,form>button{
 font-size:16px;padding:.8ex;position:relative;
