@@ -152,7 +152,7 @@ color:#555;width:1.5em;
 background-color:#eee;border-radius:5px 0 0 5px;vertical-align:middle;border:0;
 font-family:'few icons';font-size:170%;margin:0;padding:5px 3px;line-height:100%;display:inline-block}
 div.iwr{height:2.5em;width:100%}
-div.iwr>input{color:black;outline:none;font-weight:bold;
+div.iwr>input{color:black;outline:none;font-weight:bold;font-size:120%;
 padding-left:.5ex;border-radius:0 5px 5px 0;
 text-align:left;width:80%;vertical-align:middle;
 display:inline-block}
