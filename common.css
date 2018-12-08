@@ -148,15 +148,17 @@ span.wiki,a.wiki{color:#B1D2FF;transition:all .3s}
 span.wiki:hover,a.wiki:hover{color:#8AB933}
 div.iwr>*{border:0;box-sizing:border-box;height:100%}
 div.iwr>span{
-color:#555;width:10%;
+color:#555;width:1.5em;
 background-color:#eee;border-radius:5px 0 0 5px;vertical-align:middle;border:0;
-font-family:'few icons';font-size:145%;margin:0;padding:4px 3px;line-height:100%;display:inline-block}
-div.iwr{height:2em;width:100%}
+font-family:'few icons';font-size:170%;margin:0;padding:4px 3px;line-height:100%;display:inline-block}
+div.iwr{height:2.5em;width:100%}
 div.iwr>input{color:black;
 padding-left:.5ex;border-radius:0 5px 5px 0;
 text-align:left;width:80%;vertical-align:middle;
 display:inline-block}
-button.iwr{box-sizing:border-box;margin:0 auto;margin-top:.5ex;border-radius:10px;width:90%;height:2em}
+button.iwr{
+box-sizing:border-box;margin:0 auto;margin-top:.5ex;border-radius:5px;width:93%;height:2.5em;
+box-shadow:0 0 1em rgba(255,255,255,.5)}
 div.form>button,form>button{
 font-size:16px;padding:.8ex;position:relative;
 border:solid 1.5px #C7C7C7;
