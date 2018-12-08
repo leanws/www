@@ -133,8 +133,7 @@ animation:blink 2s linear infinite}
 @media(min-width:1236px){
 article.col2{max-width:40%;margin:1em 2em}
 article.col5{max-width:28%;margin:1em 5em}
-article.col6{min-width:20em;max-width:30%;margin:1em 5em}
-}
+article.col6{min-width:20em;max-width:30%;margin:1em 5em}}
 #goup{display:none;color:white;position:fixed;right:3px;bottom:3px;font-family:'few icons';font-size:160%}
 @media(max-width:1184px){
 #slogan{text-transform:uppercase;font-family:'Free Sans'}
@@ -149,14 +148,15 @@ span.wiki,a.wiki{color:#B1D2FF;transition:all .3s}
 span.wiki:hover,a.wiki:hover{color:#8AB933}
 div.iwr>*{border:0;box-sizing:border-box;height:100%}
 div.iwr>span{
-color:#555;
+color:#555;width:10%;
 background-color:#eee;border-radius:5px 0 0 5px;vertical-align:middle;border:0;
-font-family:'few icons';font-size:145%;margin:0;padding:2px 3px;line-height:100%;display:inline-block}
-div.iwr{height:2em}
+font-family:'few icons';font-size:145%;margin:0;padding:4px 3px;line-height:100%;display:inline-block}
+div.iwr{height:2em;width:100%}
 div.iwr>input{color:black;
 padding-left:.5ex;border-radius:0 5px 5px 0;
 text-align:left;width:80%;vertical-align:middle;
 display:inline-block}
+button.iwr{box-sizing:border-box;margin:0 auto;margin-top:.5ex;border-radius:10px;width:90%;height:2em}
 div.form>button,form>button{
 font-size:16px;padding:.8ex;position:relative;
 border:solid 1.5px #C7C7C7;
