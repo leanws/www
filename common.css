@@ -152,11 +152,11 @@ color:#555;width:1.5em;
 background-color:#eee;border-radius:5px 0 0 5px;vertical-align:middle;border:0;
 font-family:'few icons';font-size:170%;margin:0;padding:5px 3px;line-height:100%;display:inline-block}
 div.iwr{height:2.5em;width:100%}
-div.iwr>input{color:black;
+div.iwr>input{color:black;outline:none;
 padding-left:.5ex;border-radius:0 5px 5px 0;
 text-align:left;width:80%;vertical-align:middle;
 display:inline-block}
-div.iwr>input:focus{outline:none}
+div.iwr>input,div.iwr>input:focus{outline-style:none}
 button.iwr{
 box-sizing:border-box;margin:0 auto;margin-top:.5ex;border-radius:5px;width:93%;height:2.5em;
 box-shadow:0 0 1em rgba(255,255,255,.5)}
