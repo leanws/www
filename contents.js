@@ -3,7 +3,7 @@
 const allPages={
 'main':[['/','main page'],['plans','plans and prices'],['domains','domain availability'],['custom','customize your order']],
 'about':[['about','about Lean Web Solutions'],['busemail','email'],['time','download time'], ['payments','online payments'], ['appts','scheduling appointments online'], ['design','design'], ['info','info (wiki) service'], ['hosting','hosting']],
-'wiki':[['Appointments','appointments'],['Email','business email'],['Ftp','secure FTP account'],['SEO','search engine optimization (SEO)'],['SPF,_DKIM,_DMARC','SPF, DKIM, DMARC'],['Privacy_Protection','privacy protection'],['Hosting','hosting'],['Optimization','optimization'],['Git','git']],
+'wiki':[['Appointments','appointments'],['Email','business email'],['Ftp','secure FTP account'],['SEO','search engine optimization (SEO)'],['SPF,_DKIM,_DMARC','SPF, DKIM, DMARC'],['Privacy_Protection','privacy protection'],['Hosting','hosting'],['Optimization','code optimization'],['Git','git']],
 'other':[['privacy','privacy notice'],['terms','terms and conditions']]};
 const addrPrefixes={'wiki':'https://wiki.leanws.com/'};
 function cOnLoad(){
