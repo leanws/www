@@ -6,7 +6,7 @@ background:rgba(0,0,0,.8);color:white;margin:.5em;
 padding:0 1em 1em 1em;border-radius:10px 30px}
 article.story>h2{color:#8AB933}
 article.story>h2:first-child{margin-bottom:.5em}
-article.story>a.button{display:block;font-size:110%;margin-top:1em;border:1px solid #8A8A8A;transition:all .3s;text-align:center;border-radius:10px}
+article.story>a.button{display:block;font-size:110%;margin-top:1em;border:1px solid #565656;transition:all .3s;text-align:center;border-radius:10px}
 article.story>a:hover{color:#8AB933;cursor:pointer;border-color:#8AB933}
 article.story>a>span.plan{color:yellow}
 article.story>ul.wiki{margin:0 0 0 -2em}
