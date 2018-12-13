@@ -163,7 +163,7 @@ box-shadow:0 0 1em rgba(255,255,255,.5)}
 div.form>button,form>button{
 font-size:16px;padding:.8ex;position:relative;
 border:solid 1.5px #C7C7C7;
-background-color:rgba(0,0,0,.35);
+background-image:radial-gradient(#1A1A1A 10%,#515151);
 color:#C7C7C7;
 transition:all .6s}
 button:not(.submit):hover,
