@@ -34,7 +34,7 @@ ul.dropdown-menu>li + li{border-top:solid 1px white}
 #tinyMenu{color:#C7C7C7}
 @media(max-width:635px){
 #mainMenu{display:none}
-#tinyMenu::first-letter{font-display:fallback;font-family:"few icons"}}
+#tinyMenu::first-letter{font-family:"few icons"}}
 .header.fixed>#tinyMenu{color:#C7C7C7}
 .header.fixed #topNav #topMain>li>a{height:60px;line-height:40px}
 div.fon{background:url('https://leanws.com/road-60.jpeg');background-position:center bottom;background-repeat:no-repeat;background-size:cover;background-attachment:fixed}
@@ -60,12 +60,12 @@ transition:transform .4s ease}
 li.dropdown.hover>ul.dropdown-menu::before{transform:translateY(0)}
 li.dropdown.hover>ul.dropdown-menu{transform:translateY(0);display:inline-block;text-transform:none}
 li.dropdown>ul.dropdown-menu>li:hover>a{color:white;text-transform:uppercase}
-.dropdown::after{font-display:fallback;font-family:'few icons';content:'g'}
+.dropdown::after{font-family:'few icons';content:'g'}
 li:hover::after,li.hover::after{text-transform:none}
-.icon::first-letter{font-display:fallback;font-family:'few icons'}
+.icon::first-letter{font-family:'few icons'}
 .icon:hover::first-letter{text-transform:none}
 #verhAni{background:url('https://t.leanws.com/grey.png');padding-bottom:3em}
-#verhAni>div:last-child{width:100%;text-align:center;font-display:fallback;font-family:'Free Sans';color:#ecf0f1}
+#verhAni>div:last-child{width:100%;text-align:center;font-family:'Free Sans';color:#ecf0f1}
 @media (min-width:1087px){#verhAni>div:last-child{font-size:400%}}
 @media (min-width:807px) and (max-width:1086px){#verhAni>div:last-child{margin-top:20px;font-size:300%}}
 @media (min-width:807px){.header div.logo>img{height:60px}}
@@ -75,20 +75,20 @@ li:hover::after,li.hover::after{text-transform:none}
 .col,.col2,.col5,.col6{display:inline-block;vertical-align:middle;line-height:normal}
 .fill{text-align:justify}
 div.social>a{
-font-display:fallback;font-family:"few icons";font-size:160%;color:#C7C7C7;
+font-family:"few icons";font-size:160%;color:#C7C7C7;
 padding:.3em;border-right:1px solid #C7C7C7;border-top:1px solid #C7C7C7;border-bottom:1px solid white}
 div.social>a:first-child{border-left:1px solid white;transition:color 0.3s ease}
 #facebook:hover{color:white;background-color:#3B5998}
 #twitter:hover{color:white;background-color:#00ACEE}
 #googleP:hover{color:white;background-color:#DD4B39}
 #linkedin:hover{color:white;background-color:#0E76A8}
-footer{font-display:fallback;font-family:'Gillius';background-color:#333;color:#C7C7C7;padding-top:2em}
+footer{font-family:'Gillius';background-color:#333;color:#C7C7C7;padding-top:2em}
 footer>section>article{font-size:80%}
 footer ul{margin-bottom:0}
 ul.foot-links>li{padding-bottom:1em;font-size:120%;position:relative;font-weight:300}
 ul.foot-links>li a{color:#C7C7C7;transition:all .300s}
 ul.foot-links>li a:hover{color:white}
-div.footMenu>ul>li::before{font-display:fallback;font-family:'few icons';content:'f';font-size:8px;margin-right:4px}
+div.footMenu>ul>li::before{font-family:'few icons';content:'f';font-size:8px;margin-right:4px}
 div.footMenu{display:inline-block;margin:0}
 article.col>ul,div.footMenu>ul{text-align:left;display:inline-block}
 .input-group{vertical-align:middle}
@@ -106,7 +106,7 @@ margin-top:1em;float:right;
 text-align:center;padding:8px 15px}
 #bottomLine>ul>li>a{color:#C7C7C7;transition:all .300s}
 #bottomLine>ul>li>a:hover{color:white}
-ul.foot-links>li::first-letter{font-display:fallback;font-family:'few icons';font-size:160%}
+ul.foot-links>li::first-letter{font-family:'few icons';font-size:160%}
 .modal{
 box-sizing:border-box;
 display:none;
@@ -134,13 +134,13 @@ animation:blink 2s linear infinite}
 article.col2{max-width:40%;margin:1em 2em}
 article.col5{max-width:28%;margin:1em 5em}
 article.col6{min-width:20em;max-width:30%;margin:1em 5em}}
-#goup{display:none;color:white;position:fixed;right:3px;bottom:3px;font-display:fallback;font-family:'few icons';font-size:160%}
+#goup{display:none;color:white;position:fixed;right:3px;bottom:3px;font-family:'few icons';font-size:160%}
 @media(max-width:1184px){
-#slogan{text-transform:uppercase;font-display:fallback;font-family:'Free Sans'}
+#slogan{text-transform:uppercase;font-family:'Free Sans'}
 .largeScreen{display:none}
 #verhAni{padding-bottom:3em}}
 @media(min-width:1185px){
-#slogan{font-display:fallback;font-family:'Free Serif Italic'}
+#slogan{font-family:'Free Serif Italic'}
 .notSoLarge{display:none}
 #verhAni>section{top:-3em}
 #verhAni{padding-bottom:1.5em}}
@@ -150,7 +150,7 @@ div.iwr>*{border:0;box-sizing:border-box;height:100%}
 div.iwr>span{
 color:#555;width:1.5em;
 background-color:#eee;border-radius:5px 0 0 5px;vertical-align:middle;border:0;
-font-display:fallback;font-family:'few icons';font-size:170%;margin:0;padding:5px 3px;line-height:100%;display:inline-block}
+font-family:'few icons';font-size:170%;margin:0;padding:5px 3px;line-height:100%;display:inline-block}
 div.iwr{height:2.5em;width:100%}
 div.iwr>input{color:black;outline:none;font-weight:bold;font-size:115%;
 padding-left:.5ex;border-radius:0 5px 5px 0;
@@ -172,7 +172,7 @@ button.hover:not([disabled]),a.button.submit:hover{color:white;cursor:pointer;bo
 #login button.hover:not([disabled]){color:white}
 #login input{width:100%;border-bottom:none}
 #preloader{
-font-size:100px;font-display:fallback;font-family:'few icons';position:fixed;top:30%;width:100%;text-align:center;
+font-size:100px;font-family:'few icons';position:fixed;top:30%;width:100%;text-align:center;
 animation:rotator 5s linear infinite,colors 5s linear infinite alternate}
 @keyframes rotator{from{color:blue;transform:rotate(-180deg)}to{color:red;transform:rotate(180deg)}}
 @keyframes colors{from{color:blue}to{color:red}}
