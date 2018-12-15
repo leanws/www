@@ -1,5 +1,5 @@
-a.button{color:white;box-shadow:0 0 1em rgba(255,255,255,.5);background-image:radial-gradient(#101010 10%,#393939)}
-a.button.submit{line-height:50px;padding:0;margin-left:auto;margin-right:auto;display:block;font-size:110%;transition:all .3s;text-align:center;border-radius:10px}
+.button{color:white;box-shadow:0 0 1em rgba(255,255,255,.5);background-image:radial-gradient(#101010 10%,#393939)}
+.button.submit{line-height:50px;padding:0;margin-left:auto;margin-right:auto;display:block;font-size:110%;transition:all .3s;text-align:center;border-radius:10px}
 article.story{
 line-height:140%;
 background:rgba(0,0,0,.8);color:white;margin:.5em;
