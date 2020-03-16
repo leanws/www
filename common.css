@@ -1,11 +1,11 @@
-/* Time-stamp:<2018-12-07 19:36 EST>
+/* Time-stamp:<2019-07-16 22:26 EDT>
 * @license Copyright (c) 2018,Lean Web Solutions. All rights reserved.
 * 
 * @author:Oleg Shalaev,oleg@leanws.com */
 a{text-decoration:none}
 p{margin:1em}
-html{scroll-behavior:smooth}
-.header div.logo{margin-left:1em;display:inline-block}
+html{scroll-behavior:smooth;background:#414141}
+.header div.logo{margin-top:2px;margin-left:1em;display:inline-block}
 .header.fixed div.logo{display:inline-block}
 .header div.logo>img{transition:all .3s}
 .header.fixed div.logo>img{height:35px}
@@ -16,25 +16,29 @@ height:60px;list-style:none;cursor:default}
 .header.fixed>ul.nav{height:40px}
 .header>ul.nav>li{
 text-align:center;padding:8px 0px;
-width:6.5em;font-size:110%;
+width:6.5em;
+font-size:110%;
 display:inline-block}
 .header>ul.nav>li.dropdown{height:100%}
 .header>ul.nav>li.dropdown>ul{font-size:initial}
-ul.nav>li:not(.hover),ul.nav>li>a{color:#C7C7C7}
+ul.nav>li,ul.nav>li>a{color:#C7C7C7}
 .header>ul.nav>li:not(.dropdown):hover{text-transform:uppercase}
 .header>ul.nav>li.dropdown.hover{color:white;text-transform:uppercase}
 .header>ul.nav>li:hover:first-child{color:white;text-transform:uppercase}
-.header.fixed{height:40px;background:url('https://t.leanws.com/grey.png')}
+.header.fixed{height:40px;background:url('grey.png')}
 .header.fixed>ul.nav>li{background:none}
-ul.dropdown-menu>li>a{padding-left:1em;line-height:240%}
+ul.dropdown-menu>li{padding-left:1em;line-height:240%}
 ul.dropdown-menu>li + li{border-top:solid 1px white}
 .dropdown,.dropdown-menu>li>a{color:#C7C7C7}
 .header.fixed{z-index:10;width:100vw;position:fixed;top:0;right:0}
-@media(min-width:636px){#tinyMenu{display:none}}
+@media(min-width:636px){
+#tinyMenu{display:none}
+#obtn{display:none}}
 #tinyMenu{color:#C7C7C7}
 @media(max-width:635px){
+#obtn{display:block;padding-bottom:1em}
 #mainMenu{display:none}
-#tinyMenu::first-letter{font-family:"few icons"}}
+#tinyMenu::first-letter{font-family:"local"}}
 .header.fixed>#tinyMenu{color:#C7C7C7}
 .header.fixed #topNav #topMain>li>a{height:60px;line-height:40px}
 div.fon{background:url('https://leanws.com/road-60.jpeg');background-position:center bottom;background-repeat:no-repeat;background-size:cover;background-attachment:fixed}
@@ -43,39 +47,39 @@ article.story.col,article.story.col2,article.story.col5,article.story.col6{text-
 .list-unstyled{padding-left:0;list-style:none}
 ul.dropdown-menu{
 border:1px solid white;
-transform:translateY(-130%);
+transform:translateY(calc(-100% - 6.1ex));
 transition:transform .4s ease;
 background-color:#333;color:#C7C7C7;
 border-radius:0 0 15% 15%;
 margin-top:1em;text-align:left;
-list-style:none;min-width:12em;
+list-style:none;
 padding:0;float:left;box-sizing:border-box}
 li.dropdown>ul.dropdown-menu::before{
 content:'';width:0;height:0;border-style:solid;
 border-width:0 12px 9px;
 border-color:rgba(255,255,255,0.3) transparent;
-position:absolute;top:-.5em;left:30px;
-transform:translateY(-130%);
-transition:transform .4s ease}
+position:absolute;top:-.5em;left:30px}
 li.dropdown.hover>ul.dropdown-menu::before{transform:translateY(0)}
 li.dropdown.hover>ul.dropdown-menu{transform:translateY(0);display:inline-block;text-transform:none}
-li.dropdown>ul.dropdown-menu>li:hover>a{color:white;text-transform:uppercase}
-.dropdown::after{font-family:'few icons';content:'g'}
+li.dropdown:hover{color:white;text-transform:uppercase}
+li.dropdown>ul.dropdown-menu>li:hover,li.dropdown>ul.dropdown-menu>li:hover>a{color:white;text-transform:uppercase}
+.dropdown::after{font-family:local;content:'g'}
 li:hover::after,li.hover::after{text-transform:none}
-.icon::first-letter{font-family:'few icons'}
+.icon::first-letter{font-family:local}
 .icon:hover::first-letter{text-transform:none}
-#verhAni{background:url('https://t.leanws.com/grey.png');padding-bottom:3em}
+#verhAni{background:url('grey.png')}
 #verhAni>div:last-child{width:100%;text-align:center;font-family:'Free Sans';color:#ecf0f1}
-@media (min-width:1087px){#verhAni>div:last-child{font-size:400%}}
-@media (min-width:807px) and (max-width:1086px){#verhAni>div:last-child{margin-top:20px;font-size:300%}}
-@media (min-width:807px){.header div.logo>img{height:60px}}
-@media (max-width:806px){.header div.logo>img{height:40px}}
-@media (min-width:518px) and (max-width:806px){#verhAni>div:last-child{margin-top:20px;font-size:200%}}
-@media (max-width:517px){#verhAni>div:last-child{margin-top:20px;font-size:150%}}
+@media(min-width:1451px){#verhAni>div:last-child{font-size:400%}}
+@media(min-width:1087px) and (max-width:1450px){#verhAni>div:last-child{margin-top:20px;font-size:400%}}
+@media(min-width:807px) and (max-width:1086px){#verhAni>div:last-child{margin-top:20px;font-size:300%}}
+@media(min-width:807px){.header div.logo>img{height:60px}}
+@media(max-width:806px){.header div.logo>img{height:40px}}
+@media(min-width:518px) and (max-width:806px){#verhAni>div:last-child{margin-top:20px;font-size:200%}}
+@media(max-width:517px){#verhAni>div:last-child{margin-top:20px;font-size:150%}}
 .col,.col2,.col5,.col6{display:inline-block;vertical-align:middle;line-height:normal}
 .fill{text-align:justify}
 div.social>a{
-font-family:"few icons";font-size:160%;color:#C7C7C7;
+font-family:"local";font-size:160%;color:#C7C7C7;
 padding:.3em;border-right:1px solid #C7C7C7;border-top:1px solid #C7C7C7;border-bottom:1px solid white}
 div.social>a:first-child{border-left:1px solid white;transition:color 0.3s ease}
 #facebook:hover{color:white;background-color:#3B5998}
@@ -87,8 +91,8 @@ footer>section>article{font-size:80%}
 footer ul{margin-bottom:0}
 ul.foot-links>li{padding-bottom:1em;font-size:120%;position:relative;font-weight:300}
 ul.foot-links>li a{color:#C7C7C7;transition:all .300s}
-ul.foot-links>li a:hover{color:white}
-div.footMenu>ul>li::before{font-family:'few icons';content:'f';font-size:8px;margin-right:4px}
+ul.foot-links>li:hover,ul.foot-links>li a:hover{color:white}
+div.footMenu>ul>li::before{font-family:local;content:'f';font-size:8px;margin-right:4px}
 div.footMenu{display:inline-block;margin:0}
 article.col>ul,div.footMenu>ul{text-align:left;display:inline-block}
 .input-group{vertical-align:middle}
@@ -106,24 +110,10 @@ margin-top:1em;float:right;
 text-align:center;padding:8px 15px}
 #bottomLine>ul>li>a{color:#C7C7C7;transition:all .300s}
 #bottomLine>ul>li>a:hover{color:white}
-ul.foot-links>li::first-letter{font-family:'few icons';font-size:160%}
-.modal{
-box-sizing:border-box;
-display:none;
-position:fixed;left:0%;top:0%;
-z-index:14;width:100%;height:100%;
-background-color:rgba(0,0,0,0.4)}
-.modal-content{background-color:#333;margin:20% auto;box-shadow:0 0 1em rgba(255,255,255,.5)}
-.close{
-color:white;
-font-size:150%;font-weight:bold;
-position:absolute;top:-4px;right:0}
-#login input{width:100%;padding:1ex;box-sizing:border-box;margin:0}
-#loginoutH,#loginoutB{cursor:pointer}
-@media(max-width:243px){#slogan{display:none}}
+ul.foot-links>li::first-letter{font-family:local;font-size:160%}
 @media(max-width:600px){#PTC{display:none}}
 #message{
-position:fixed;top:50%;width:100%;z-index:40;text-align:center;
+position:fixed;top:30%;width:100%;z-index:40;text-align:center;
 font-size:200%;color:#FF6685;
 animation:blink 2s linear infinite}
 @keyframes blink{
@@ -134,23 +124,22 @@ animation:blink 2s linear infinite}
 article.col2{max-width:40%;margin:1em 2em}
 article.col5{max-width:28%;margin:1em 5em}
 article.col6{min-width:20em;max-width:30%;margin:1em 5em}}
-#goup{display:none;color:white;position:fixed;right:3px;bottom:3px;font-family:'few icons';font-size:160%}
+#goup{display:none;color:white;position:fixed;right:3px;bottom:3px;font-family:local;font-size:160%}
 @media(max-width:1184px){
 #slogan{text-transform:uppercase;font-family:'Free Sans'}
 .largeScreen{display:none}
-#verhAni{padding-bottom:3em}}
+#verhAni{padding-bottom:1.5em}}
 @media(min-width:1185px){
 #slogan{font-family:'Free Serif Italic'}
 .notSoLarge{display:none}
-#verhAni>section{top:-3em}
-#verhAni{padding-bottom:1.5em}}
+#verhAni>section{top:-3em}}
 span.wiki,a.wiki{color:#B1D2FF;transition:all .3s}
 span.wiki:hover,a.wiki:hover{color:#8AB933}
 div.iwr>*{border:0;box-sizing:border-box;height:100%}
 div.iwr>span{
 color:#555;width:1.5em;
 background-color:#eee;border-radius:5px 0 0 5px;vertical-align:middle;border:0;
-font-family:'few icons';font-size:170%;margin:0;padding:5px 3px;line-height:100%;display:inline-block}
+font-family:local;font-size:170%;margin:0;padding:5px 3px;line-height:100%;display:inline-block}
 div.iwr{height:2.5em;width:100%}
 div.iwr>input{color:black;outline:none;font-weight:bold;font-size:115%;
 padding-left:.5ex;border-radius:0 5px 5px 0;
@@ -170,11 +159,10 @@ button:not(.submit):hover,
 button.hover:not([disabled]),a.button.submit:hover{color:white;cursor:pointer;border-color:#8AB933;background:#5C261B;z-index:15}
 #login button{width:calc(50% + 1px)}
 #login button.hover:not([disabled]){color:white}
-#login input{width:100%;border-bottom:none}
-#preloader{
-font-size:100px;font-family:'few icons';position:fixed;top:30%;width:100%;text-align:center;
-animation:rotator 5s linear infinite,colors 5s linear infinite alternate}
-@keyframes rotator{from{color:blue;transform:rotate(-180deg)}to{color:red;transform:rotate(180deg)}}
-@keyframes colors{from{color:blue}to{color:red}}
+#login input{width:100%;border-bottom:none;font-size:80%}
 table.bordered th,table.bordered td{border:1px solid white}
 table.bordered{border-collapse:collapse}
+@media(max-width:350px){.toofat{display:none}}
+#toofat{display:none}
+text.LWS{font-family:local;font-size:120px}
+.localFont{display:none}

@@ -1,11 +1,11 @@
 .button{color:white;box-shadow:0 0 1em rgba(255,255,255,.5);background-image:radial-gradient(#101010 10%,#393939)}
-.button.submit{line-height:50px;padding:0;margin-left:auto;margin-right:auto;display:block;font-size:110%;transition:all .3s;text-align:center;border-radius:10px}
+.button.submit{line-height:3ex;padding:1ex;margin-left:auto;margin-right:auto;display:block;font-size:110%;transition:all .3s;text-align:center;border-radius:10px}
 article.story{
 line-height:140%;
 background:rgba(0,0,0,.8);color:white;margin:.5em;
 padding:0 1em 1em 1em;border-radius:10px 30px}
-article.story>h2{color:#8AB933}
-article.story>h2:first-child{margin-bottom:.5em}
+article.story h1,article.story h2{color:#8AB933}
+article.story>h1:first-child,article.story>h2:first-child{margin-bottom:.5em}
 article.story>a.button{display:block;font-size:110%;margin-top:1em;border:1px solid #565656;transition:all .3s;text-align:center;border-radius:10px}
 article.story>a:hover{color:#8AB933;cursor:pointer;border-color:#8AB933}
 article.story>a>span.plan{color:yellow}
@@ -17,4 +17,3 @@ article.story>ul.wiki>li:first-child{margin-top:0}
 input.text{box-sizing:border-box;background-color:rgba(0,0,0,.3);color:white;margin-top:5px}
 input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;appearance:none;margin:0}
 input[type=number]{width:5ex;-moz-appearance:textfield;appearance:textfield}
-p.priceSig{border-radius:7px;display:inline-block;color:white;padding:1ex;background:rgba(0,0,0,.6)}

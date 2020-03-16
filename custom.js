@@ -2,7 +2,7 @@
 
 var bi='', SR='',DZ='';
 const bj='~`\\^\\$%!@&_*\\(\\)=\\[\\]\\"\' ';
-const cm="payOnline contentMngmt morePages emailService apptForOne apptForMany domainIsAvailable".split(' ');
+const cm="payOnline chatService contentMngmt morePages emailService apptForOne apptForMany domainIsAvailable".split(' ');
 const co=["regPrice","transPrice","NoPs"];
 function aa(){
 var self=this;
@@ -10,13 +10,21 @@ cm.forEach(x=>self[x]=ko.observable(false));
 co.forEach(x=>self[x]=ko.observable(0));
 if(self.NoPs()<2)self.NoPs(2);
 self.NoPs.subscribe(function(v){if(v<2){self.NoPs(2)}else if(v>20)self.NoPs(20)});
+self.NoGb=ko.observable(10);
+self.NoGb.subscribe(function(v){
+if(v<10){self.NoGb(10)}else if(v>100)self.NoGb(100);
+self.NoGb(10*Math.ceil(v/10)) });
+self.chatMb=ko.observable(30);
+self.chatMb.subscribe(function(v){
+if(v<30){self.chatMb(30)}else if(v>300)self.chatMb(300);
+self.chatMb(30*Math.ceil(v/30)) });
 self.apptForOne. subscribe(function(v){if(v)self.apptForMany(false)});
 self.apptForMany.subscribe(function(v){if(v)self.apptForOne(false)});
 self.domainName=ko.observable("");
 self.domainName.subscribe(function(DN){
 bi=validator.blacklist(DN.trim().toLowerCase(),bj);
-if(bi!=DN){self.domainName('')}
-else if(DN!=''){
+self.domainName(bi);
+if(DN!=''){
 var domainName=bi.slice(0,bi.lastIndexOf("."));
 var ad=bi.lastIndexOf(".");
 DZ=(ad!=-1)? (bi.slice(ad)):'';
@@ -50,12 +58,14 @@ self.submit=function(){
 var ordered='?DN='+bi;
 cm.forEach(function(x){if(self[x]()){ordered+='&'+x+'=1'}});
 if(self.morePages())ordered+='&NoPs='+self.NoPs();
+if(self.emailService())ordered+='&NoGb='+self.NoGb();
+if(self.chatService())ordered+='&chatMb='+self.chatMb();
 window.location.assign('order'+ordered)}}
 const ae=["dZone","regPrice","transPrice","renewPrice"];
 function zone(zName){var nrself=this;ae.forEach(function(vn){nrself[vn]=""});nrself.dZone=zName}
 var ac=[];
 function bb(){
-loadScripts(["js-lib/ajaxme.js","js-lib/validator.min.js"]).then(function(){
+Packages.load("AjaxMe","validator").then(function(){
 window.AjaxMe.get({url:'/cgi-bin/listAvailableZones',
 success:function(r){
 var response=JSON.parse(r.response);
@@ -68,7 +78,7 @@ nz.renewPrice=response['domains'][i][3];
 ac.push(nz)}}
 else{showInfo(response['errMessage'])}}})})}
 var rvm;
-loadScripts(["js-lib/knockout-latest.js","js-lib/validator.min.js"]).then(function(){
+Packages.load("KO","validator").then(function(){
 rvm=new aa();
-ko.applyBindings(rvm);
+ko.applyBindings(rvm,IDget('rvm'));
 bb()});

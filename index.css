@@ -1,103 +1,58 @@
-/* Time-stamp: <2018-06-10 20:29 EDT> */
-
-/* body *{z-index:1;} */
-
-.svg-wrap {
-    /* background-color:cyan; */
-    z-index:6;
-    width:auto;    margin:1px auto;
-    display:inline-block; position: relative;vertical-align:middle;}
-
+.svg-wrap{
+z-index:6;
+width:auto;
+position:relative}
 .svg-wrap a{width:auto;margin:1px auto}
-
-#svgLinks>div.svgWW{margin:10px;display:inline-block}
-.svg-wrap svg{font-family:'Free Sans';font-size:40px; position:absolute; vertical-align: top}
-
-#svgLinks>div a>svg:last-child{left:0}
-#svgLinks>div a>svg:first-child{fill:none;stroke:white;stroke-width:2}
-
-@media  (max-width:831px){
-    #obtn{margin-bottom:2em}
-    #obtn>div{position:relative;top:2em}}
-
-@media(min-width:832px) and (max-width:1000px){
-    #svgLinks{margin-bottom:-3em;}
-    #svgLinks>div.svgWW{width:100%;min-width:44vw}
-    #obtn{position:relative;top:-9em}}
-@media(min-width:1001px){
-    .small{display:none}
-    .middleSVG{position:relative;top:4em}
-    #obtn{position:relative;top:-6.5em}}
-
-#obtn>div>a::after {
-    font-size:20px;
-	 line-height:12px; top:0;
-	 display:inline-block;
-	 position:absolute;
-	 padding-left:.2em;
-    font-family:'few icons';content:"\\"; color:#C7C7C7;
-    animation:invite1 .3s alternate ease infinite;}
-#obtn>div:hover>a::after{color:white; animation:invite2 .2s alternate ease infinite; }
+#svgLinks>div.svgWW{display:inline-block;position:relative;top:1ex}
+.svg-wrap svg{font-family:'Free Sans';font-size:40px;position:absolute;vertical-align:top}
+#svgLinks>div a>svg{left:0}
+@media (min-width:1261px){.svgWW{margin:0 4ex}}
+@media (min-width:1081px) and (max-width:1260px){.svgWW{margin:0 1ex}}
+@media (min-width:901px) and (max-width:1080px){.svgWW{margin:0 6ex}}
+@media (min-width:671px) and (max-width:900px){.svgWW{margin:0 4ex}}
+@media (max-width:670px){.svgWW{margin:0 1ex}}
+#obtn{position:relative;top:1.5em}
+#obtn>div>a::after{
+font-size:20px;
+line-height:12px;top:0;
+display:inline-block;
+position:absolute;
+padding-left:.2em;
+font-family:local;content:"\\";color:#C7C7C7;
+animation:invite1 .3s alternate ease infinite}
+#obtn>div:hover>a::after{color:white;animation:invite2 .2s alternate ease infinite}
 #obtn>div{
-    width:9em;padding:10px .5em 10px 0;box-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
-    font-size:16px;
-    border-radius:10px;margin:0 auto;border:solid 2px rgba(255, 255, 255, 0.5);transition:all .6s;}
+width:9em;padding:11px .5em 10px 0;box-shadow:0 0 1em rgba(255,255,255,.5);
+font-size:16px;background-color:rgba(0,0,0,.25);
+border-radius:10px;margin:0 auto;border:solid 2px rgba(255,255,255,0.5);transition:all .6s}
 #obtn>div:hover{cursor:pointer;border-color:#8AB933;background:#5C261B}
-/* #obtn>div>a{color:#92D98C} */
 #obtn>div:hover>a{color:white}
-/* animation "we are..." starts here */
-div.text-ani {
-    height:57px; padding:0 55px 0 0;
-    overflow:hidden; /* ← overflow is not understood by firefox? */
-    white-space:nowrap;overflow:hidden; padding:0;}
-div.text-ani>ul {
-    margin-top:0; padding-left:2em; text-align:left; list-style:none;
-    animation-name:weAre; animation-duration:30s; animation-iteration-count:infinite; }
-
-@keyframes weAre {
-    0%, 12.66%, 100% {transform:translate(0, 0);}
-    16.66%, 29.32% {transform:translate(0, -25%);}
-    33.32%,45.98% {transform:translate(0, -50%);}
-    49.98%,62.64% {transform:translate(0, -75%);}
-    66.64%,79.3% {transform:translate(0, -50%);}
-    83.3%,95.96% {transform:translate(0, -25%);}}
-/* animation "we are..." ends here */
-
-#svgLinks >div.svgWW>div.svg-wrap > a > svg:first-child {opacity:0;
-  stroke-miterlimit:10; stroke-dasharray:612; stroke-dashoffset:600; stroke-linecap:round;
-  -webkit-transition:stroke-dashoffset 0s 0.2s, opacity 0.2s;
-  transition: stroke-dashoffset 0s 0.2s, opacity 0.2s; }
-#svgLinks >div.svgWW>div.svg-wrap > a:hover > svg:first-child {
-  stroke-dashoffset:0; opacity:1;
-      -webkit-transition:opacity 0s, stroke-dashoffset .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-      transition:opacity 0s, stroke-dashoffset .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-      fill:rgba(0,0,0,.3)
-}
-#svgLinks >div.svgWW>div.svg-wrap > a > svg:last-child { fill:url(#lightcenter)}
-#svgLinks >div.svgWW>div.svg-wrap > a:hover > svg:last-child {fill:#92D98C}
-
+div.text-ani{
+height:57px;padding:0 55px 0 0;
+overflow:hidden;
+white-space:nowrap;overflow:hidden;padding:0}
+div.text-ani>ul{
+margin-top:0;padding-left:2em;text-align:left;list-style:none;
+animation-name:weAre;animation-duration:30s;animation-iteration-count:infinite}
+@keyframes weAre{
+0%,12.66%,100%{transform:translate(0,0)}
+16.66%,29.32%{transform:translate(0,-25%)}
+33.32%,45.98%{transform:translate(0,-50%)}
+49.98%,62.64%{transform:translate(0,-75%)}
+66.64%,79.3%{transform:translate(0,-50%)}
+83.3%,95.96%{transform:translate(0,-25%)}}
+#svgLinks>div.svgWW>div.svg-wrap>a:hover>svg{filter:url(#f2)}
+#svgLinks>div.svgWW>div.svg-wrap>a>svg{fill:url(#lightcenter)}
+#svgLinks>div.svgWW>div.svg-wrap>a:hover>svg{fill:#92D98C}
 #central{font-size:400%;color:#ecf0f1}
-
-a.button {background:transparent; color:white;font-family:"Free Sans"}
-
-@keyframes invite1{from{transform:translateX(1px);}to{transform:translateX(0);}}
-@keyframes invite2{from{transform:translateX(3px);}to{transform:translateX(0);}}
-
-article.story > h2::first-letter{font-family:"few icons";color:white;background:#414141;padding:5px;}
-
-/* the following is individual for each page: */
-@media(min-width:1236px){
-    article.story:nth-child(2){width:30%;}
-    article.story:nth-child(3){width:25%;}
-    article.story:nth-child(4){width:35%;}}
-@media (min-width:807px) and (max-width:1235px){
-    /* div.footMenu{width:100%;} */
-    article.story:nth-child(2){width:30%;}
-    article.story:nth-child(3){width:30%;}
-    article.story:nth-child(4){width:35%;}}
-/* article.story.col{min-width:35ex} */
-#goup{background:rgba(0,0,0,0.4);}
-
-/* ссылки на белом фоне: */
-a.hrow{transition:all .3s}
-a.hrow:hover{color:#8AB933}
+a.button{background:transparent;color:white;font-family:"Free Sans"}
+@keyframes invite1{from{transform:translateX(1px)}to{transform:translateX(0)}}
+@keyframes invite2{from{transform:translateX(3px)}to{transform:translateX(0)}}
+article.story>h2::first-letter{font-family:"few icons";color:white;background:#414141;padding:5px}
+@media (min-width:807px){
+article.story:nth-child(3){width:40%}
+article.story:nth-child(2){width:40%}}
+#goup{background:rgba(0,0,0,0.4)}
+a.hrow{
+color:#201E80;transition:all .3s}
+a.hrow:hover{color:#0D5F07}

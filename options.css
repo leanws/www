@@ -1,23 +1,25 @@
 ul.options{list-style:none;width:100%}
 label.options{position:relative}
 label.options{
-display:inline-block;
+display:flex;align-items:center;
+justify-content:space-between;
 vertical-align:middle;
 cursor:pointer;
 min-height:34px;
 width:100%}
-label.options>p,p.options{display:inline-block;margin:0 80px 0 0}
-label.options>p::before,p.options::before{font-family:'few icons';content:'m';font-size:120%;margin-right:.5em}
+label.options>p,p.options{order:-1;display:inline-block;margin:0 1ex 0 0}
+label.options>p::before,p.options::before{font-family:local;content:'m';font-size:120%;margin-right:.5em}
 ul.options>li+li{margin-top:1em}
 label.options>i,label.local>i{
-border:1px solid rgba(255,255,255,.3);
-background:rgba(0,0,0,0.3);border-radius:5px;
-position:absolute;top:0;right:4px;
-width:30px;height:30px;margin:0}
+order:0;padding:5px;
+border:1px solid rgba(255,255,255,.3);border-radius:5px;
+background:rgba(0,0,0,0.3);
+width:20px;height:20px;margin:0}
 label.options>input,label.local>input{display:none}
 label.options>input:checked + i,label.local>input:checked + i{border-color:rgba(255,255,255,.8)}
 label.options>input + i:after,label.local>input + i:after{
-position:absolute;width:15px;height:15px;top:5px;left:5px;
+width:15px;height:15px;
 background-color:transparent;opacity:0;transition:opacity 0.1s;
 font:normal normal normal 17px/1 "few icons";content:"C"}
+label.options>input:checked + i:after,label.local>input:checked + i:after{opacity:1}
 label.options>input:checked + i:after,label.local>input:checked + i:after{opacity:1}

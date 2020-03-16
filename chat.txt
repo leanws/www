@@ -1,0 +1,42 @@
+<section title="Another way to communicate with customers">
+Some customers prefer text chat to phone calls. A chat icon on your website might be one of your advantages over the competitors.
+
+We offer affordable on-line chat service to our customers. You can chat with your customers using your desktop/laptop or smart phone.
+
+We are able to keep low price on chat because we use modern web technologies. The downside is that our chat system will not work with an obsolete web browser (e.g., Internet Explorer). 
+
+<span class="chatPossible">To test our chat system, open chat window by clicking the link on the right.</span>
+
+Please visit <a class="wiki" href="custom">custom order page</a> to include chat system in your order.
+
+<h2>Prices</h2>
+Installation: $30.<br>
+Monthly fee: $1 unless you use it really hard, see below.
+
+<h2>50 megabytes of traffic</h2>
+We charge $1/month for the chat service if your chat traffic does not exceed 50 megabytes.
+This  is usually enough for small business (note that the
+size of &quot;War and Peace&quot; – 1274 pages – by Leo Tolstoy is less than 8 megabytes).
+For larger data amounts there is a fee of $1 per every 50 megabytes transmitted.
+</section>
+
+<section title="Protection from prank">
+To make it more accessible we do not use captcha for the chat service.
+A website visitor who has sent 10 messages and did not receive any response from the operator gets temporary banned.
+
+There is a size limit of 50 kbytes per message, which is approximately 10.000 words. (Can be changed by request.)
+</section>
+
+<section title="Chat status">
+There are three chat states: green, orange, and red.
+
+Green means that the operator is fully available and can respond fast. Orange means that the operator is partially available, but still can respond within several minutes. Red means that
+the operator is not available. (S)he will still receive the messages, but will not respond within a reasonable time.
+When the chat status is red (unavailable), the chat icon on the right is hidden, so a new chat can not be initiated.
+
+Switching chat states on a website is easy (for authorized persons):
+for example, to change it on leanws.com
+visit <a class="wiki" href="https://leanws.com/chatStatus?status=green">https://leanws.com/chatStatus?status=green</a> to switch the status to green, and, similarly, to orange or red.
+
+The address <a class="wiki" href="https://leanws.com/chatStatus">https://leanws.com/chatStatus</a> is password-protected, to prevent unauthorized usage.
+</section>

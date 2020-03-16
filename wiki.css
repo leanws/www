@@ -11,7 +11,7 @@ div.mini-image:hover::after{
 width:95%;
 height:100%;
 line-height:400px;
-font-family:'few icons';font-size:120px;content:"s";position:absolute;left:0;
+font-family:local;font-size:120px;content:"s";position:absolute;left:0;
 text-align:center;cursor:pointer;
 background-color:rgba(0,0,0,.2);color:white;
 border-radius:50px;

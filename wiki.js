@@ -8,10 +8,10 @@ var windowWidth=0;
 function zoomImage(obj){
 if(windowWidth>1.2*Math.max.apply(Math,availabelRes)){
 messageOnce('Click to restore normal view.');
-bigImage.src='https://t.leanws.com/'+"wiki/full-size/"+obj.getAttribute("file");
+bigImage.src="wiki/full-size/"+obj.getAttribute("file");
 biWrapper.style.display='block'
 }}
-labels.forEach(function(x){
+forEach1(labels,function(x){
 var file=x.getAttribute("file"),BN=file.split(".")[0], 
 nodeDiv=document.createElement("div"),
 nodeIMG=document.createElement("img"),
@@ -33,7 +33,7 @@ var i=0;while(windowWidth>availabelRes[i] && i<availabelRes.length){i++}
 var width=availabelRes[i-1];
 if(width>widthLoaded){
 widthLoaded=width;
-images.forEach(x=>x.src='https://t.leanws.com/'+"wiki/"+width+"/"+x.getAttribute("file"))}}
+forEach1(images,x=>x.src="wiki/"+width+"/"+x.getAttribute("file"))}}
 function modalEscPressed(event){
 var kc=event.keyCode;
 if(27==kc) login()} 

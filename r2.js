@@ -1,5 +1,7 @@
 // Copyright (c) 2018 Lean Web Solutions https://leanws.com
 
+capability["SSE"]=Boolean(typeof(EventSource) !=="undefined");
+capability["WS"]="WebSocket" in window;
 var header=document.getElementsByClassName("header")[0],body=document.getElementById("verhAni");
 var SM,allInputs,allButtons;
 function showInfo(mes,sec,bz){
@@ -60,7 +62,7 @@ const userMenuItems=[
 {'html':'<a href="holidays">V holidays</a>','allowedFor':["all"]},
 {'html':'<a href="day">r appointments</a>','allowedFor':["all"]}];
 function be(bu){
-loadScript("js-lib/js.cookie.js").then(function(){
+load("/js-lib/js.cookie.js").then(function(){
 var loginoutH=IDget('loginoutH');
 if(Cookies.get('bu') !==undefined){
 loginoutH.classList.add("dropdown");
@@ -73,26 +75,14 @@ html('loginoutH',userMenuHtml)}
 else{
 loginoutH.classList.remove("dropdown");
 html('loginoutH','login')}})} 
-var loadHTML=(function(){
-var cq={};
-return function(cp){
-if(cp in cq){return cq[cp]}
-else{
-return (cq[cp]=new Promise((resolve,reject)=>{
-if(IDget(cp))
-{loadScript("js-lib/ajaxme.js").then(function(){
-window.AjaxMe.get({url:'https://t.leanws.com/'+cp+'.html',
-// window.AjaxMe.get({url:cp+'.html',
-success:r=>{html(cp,r.response);resolve(r.response)},
-error:r=>reject(r)})})}
-else{resolve()}}))}}})();
+var loadHTML=(cp)=> load(cp+'.html').then((f)=>{if(IDget(cp)) html(cp,f)});
 function loadHTMLs(af){return Promise.all(af.map(x=>loadHTML(x)))} 
 loadHTML('menu').then(function(){
 be();
 SM=toArray(document.querySelectorAll("li.dropdown"));
 SM.forEach(x=>x.onmouseenter=function(){hover(x,200)});
 IDget("mainMenu").onmouseleave=function(){unhover(SM,200)};
-if(IDget('canvas'))loadScript('points.js')});
+if(IDget('canvas'))load('points.js')});
 loadHTMLs(['login','footer']).then(function(whatsdone){
 allInputs=document.querySelectorAll('input');allButtons=document.querySelectorAll('button');
 document.querySelectorAll('div.form') 
@@ -106,6 +96,9 @@ form.querySelectorAll('input.required').forEach(function(x){
 x.disabled=false;
 x.onkeydown=function(event){
 if(10==event.keyCode||13==event.keyCode)submitForm(form)}})})});
+if(capability["SSE"] && capability["WS"] && IDget('chat'))loadHTML('chat')
+.then(function(){load("js-lib/knockout-latest.js")
+.then(function(){loads(['chat.js','chat.css'])})});
 var messageOnce=(function(){
 var bm=[];
 return function(mes){
@@ -137,7 +130,7 @@ var SMC=toArray(me.classList);
 if(-1==SMC.indexOf('hover'))hover(me)
 else unhover([me])}
 function login(me){
-loadScript("js-lib/js.cookie.js").then(function(){
+load("/js-lib/js.cookie.js").then(function(){
 if(Cookies.get('leanws')===undefined){
 var lf=document.getElementById("login");
 unhover(toArray(document.getElementsByClassName("hover")));
@@ -145,7 +138,7 @@ lf.style.display="block";lf.focus();
 }
 else{switchHover(me)}})}
 function ar(bl){
-loadScripts(["js-lib/js.cookie.js","js-lib/ajaxme.js","js-lib/md5.min.js"],function(){
+loads(["/js-lib/js.cookie.js","/js-lib/ajaxme.js","/js-lib/md5.min.js"],function(){
 var username,cr;[username,cr]=['username','cr'].map(x=>document.getElementById(x).value)
 if(""!=username && ""!=cr){
 closeModals();
@@ -161,12 +154,12 @@ function loginKeyPressed(event){
 var kc=event.keyCode;
 if(kc==10||kc==13) ar()} 
 function logout(){
-loadScript("js-lib/js.cookie.js").then(function(){
+load("/js-lib/js.cookie.js").then(function(){
 Cookies.remove('leanws',{path:'/'});
 Cookies.remove('bu',{path:'/'});
 location.reload()})}
 function recoverPassword(){
-loadScripts(["js-lib/ajaxme.js","js-lib/validator.min.js","js-lib/js.cookie.js"]).then(function(){
+loads(["/js-lib/ajaxme.js","/js-lib/validator.min.js","/js-lib/js.cookie.js"]).then(function(){
 if(!validator.isEmail(val("username")) && !validator.isAlphanumeric(val("username"))){
 showInfo("Please provide email or user ID.");} else{
 Cookies.remove('leanws',{path:'/'});
@@ -181,7 +174,7 @@ else{showInfo(response['errMessage'],8)}}})}})}
 function submitForm(form){
 var ch={},submit=true, submitButton=form.querySelector('button.submit'),
 allInputs=form.querySelectorAll('input');
-loadScript("js-lib/ajaxme.js").then(function(){
+load("/js-lib/ajaxme.js").then(function(){
 unhover([submitButton]);
 allInputs.forEach(function(reqInp){
 var name=reqInp.getAttribute("name");
@@ -211,3 +204,5 @@ function escModals(event){
 var kc=event.keyCode;
 if(27==kc) closeModals()} 
 function hideInfo(){hideID('message')}
+function getURLParameter(name){
+return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[null, ''])[1].replace(/\+/g, '%20'))||null;}

@@ -1,9 +1,1 @@
-<div class="modal-content" style="width:15em;border-radius:0 0 10px 10px;">
-<div class="form" cgi="checkPassword" style="position:relative;box-sizing:border-box">
-<span onclick="recoverPassword();" style="cursor:pointer;color:white;font-size:75%;">&nbsp;forgot password or first login?</span>
-<span style="cursor:pointer" class="close" onclick="closeModals()">×</span>
-<input descr="user name or email" class="form required" name="username" id="username" placeholder="login ID or email" type="text"><br>
-<input descr="password" class="form required" name="password" placeholder="password" type="password"><br>
-<button style="border-radius:0 0 0 10px" class="submit icon" type="button">j&nbsp;enter</button><button style="margin-left:-2px;border-radius:0 0 10px 0;" class="icon" onclick="closeModals()" type="button">D&nbsp;cancel</button>
-</div>
-</div>
+<div class="modal-content" style="width:15em;border-radius:0 0 10px 10px"><form class="form" cgi="checkPassword" style="position:relative;box-sizing:border-box"><span onclick="recoverPassword(this.parentNode);" style="cursor:pointer;color:white;font-size:70%;">&nbsp;forgot password or first time login?</span><span style="cursor:pointer" class="close" onclick="closeModals()">×</span><input test="ASCIIonly" descr="user name or email" class="form required" name="username" placeholder="login ID or email" type="text"><br><input descr="password" class="form required" name="password" placeholder="password" type="password"><br><button style="border-radius:0 0 0 10px" class="submit icon" type="submit">j&nbsp;enter</button><button style="margin-left:-2px;border-radius:0 0 10px 0;" class="icon" onclick="closeModals()" type="button">D&nbsp;cancel</button></form></div>
